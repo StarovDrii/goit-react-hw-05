@@ -1,0 +1,9 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.img {
+  width: min(100% - 30px, 650px);
+}

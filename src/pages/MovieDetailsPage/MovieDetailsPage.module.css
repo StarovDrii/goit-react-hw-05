@@ -1,0 +1,38 @@
+.wrap{
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.backlink{
+    width: fit-content;
+    border: 1px solid lightgray;
+    padding:0px 4px ;
+    border-radius: 6px;
+}
+.card{
+    display: flex;
+    gap: 6px;
+}
+.poster{
+    border-radius: 4px;
+}
+.title{
+    width: 100%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.details{
+    margin-top: auto;
+    color: orangered;
+}
+@media screen and (max-width: 767px) {
+  .card{
+    flex-wrap: wrap;
+  }
+  .details{
+    margin-top: 20px;
+}
+}
