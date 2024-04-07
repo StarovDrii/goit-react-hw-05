@@ -1,10 +1,10 @@
-.wrap{
-    display: flex;
-    gap: 12px;
-    margin-bottom: 6px;
-    flex-wrap: wrap;
+.wrap {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
 }
-.input{
-    border: 1px solid lightgray;
-    border-radius: 6px;
+.input {
+  border: 1px solid lightgray;
+  border-radius: 6px;
 }

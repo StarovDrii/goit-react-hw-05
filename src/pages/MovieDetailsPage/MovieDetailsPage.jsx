@@ -9,7 +9,12 @@ import {
   getMovieById,
   posterBaseUrl,
 } from '../../movies-api'
-import { useState, useEffect, useRef, Suspense } from 'react'
+import {
+  useState,
+  useEffect,
+  useRef,
+  Suspense,
+} from 'react'
 import Loader from '../../components/Loader/Loader'
 import NotFoundPage from '../NotFoundPage/NotFoundPage'
 import css from './MovieDetailsPage.module.css'
@@ -19,7 +24,7 @@ export default function MovieDetailsPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(false)
   const location = useLocation()
-const backLincRef = useRef(location.state ?? "/movies")
+  const backLincRef = useRef(location.state ?? '/movies')
   useEffect(() => {
     async function getData() {
       try {
@@ -37,10 +42,17 @@ const backLincRef = useRef(location.state ?? "/movies")
 
   return (
     <div className={css.wrap}>
-      {!error && <Link to={backLincRef.current} className={css.backlink}>Go back</Link>}
+      {!error && (
+        <Link
+          to={backLincRef.current}
+          className={css.backlink}
+        >
+          Go back
+        </Link>
+      )}
       {error && <NotFoundPage />}
-      {isLoading && <Loader/>}
-      
+      {isLoading && <Loader />}
+
       {movie && (
         <div className={css.card}>
           <img
@@ -50,18 +62,18 @@ const backLincRef = useRef(location.state ?? "/movies")
           />
           <div className={css.info}>
             <h2 className={css.title}>{movie.title}</h2>
-          <h3>Rating</h3>
-          <p>{movie.vote_average}</p>
-          <h3>Owerview</h3>
-          <p>{movie.overview}</p>
-          <h3>Genres</h3>
-          <ul className={css.genres}>
-            {movie.genres &&
-              movie.genres.map((genre) => (
-                <li key={genre.id}>
-                  <p>{genre.name}</p>
-                </li>
-              ))}
+            <h3>Rating</h3>
+            <p>{movie.vote_average}</p>
+            <h3>Owerview</h3>
+            <p>{movie.overview}</p>
+            <h3>Genres</h3>
+            <ul className={css.genres}>
+              {movie.genres &&
+                movie.genres.map((genre) => (
+                  <li key={genre.id}>
+                    <p>{genre.name}</p>
+                  </li>
+                ))}
             </ul>
             <ul className={css.details}>
               <li>
@@ -74,9 +86,9 @@ const backLincRef = useRef(location.state ?? "/movies")
           </div>
         </div>
       )}
-        <Suspense fallback={null}>
-              <Outlet />
-            </Suspense>
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
     </div>
   )
 }

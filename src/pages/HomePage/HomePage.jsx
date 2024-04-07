@@ -28,7 +28,7 @@ export default function HomePage() {
   return (
     <div className={css.wrap}>
       {isLoading && <Loader />}
-      {error && <NotFoundPage/>}
+      {error && <NotFoundPage />}
       <h2 className={css.title}>Today in top</h2>
       <MovieList items={movies} />
     </div>

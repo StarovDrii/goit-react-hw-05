@@ -15,7 +15,9 @@ export default function MovieFilter() {
       <input
         type="text"
         value={value}
-        onChange={(e) => changeFilter(e.target.value.trim())}
+        onChange={(e) =>
+          changeFilter(e.target.value.trim())
+        }
         placeholder="Search movies..."
         className={css.input}
       />

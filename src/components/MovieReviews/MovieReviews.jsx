@@ -28,22 +28,27 @@ export default function MovieReviews() {
   }, [movieId])
 
   return (
-  <div>
-    {(isLoading && !reviews.length) && <Loader />}
-    {error && <NotFoundPage />}
-    {reviews.length > 0 ? (
-      <div>
-        {reviews.map((post) => (
-          <div key={post.id}
-          className={css.post}>
-            <p className={css.author}>Author: {post.author}</p>
-            <p>{post.content}</p>
-          </div>
-        ))}
-      </div>
-    ) : (
-      !isLoading && <p className={css.noReviews}>No reviews available</p>
-    )}
-  </div>
-)
+    <div>
+      {isLoading && !reviews.length && <Loader />}
+      {error && <NotFoundPage />}
+      {reviews.length > 0 ? (
+        <div>
+          {reviews.map((post) => (
+            <div key={post.id} className={css.post}>
+              <p className={css.author}>
+                Author: {post.author}
+              </p>
+              <p>{post.content}</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        !isLoading && (
+          <p className={css.noReviews}>
+            No reviews available
+          </p>
+        )
+      )}
+    </div>
+  )
 }

@@ -21,12 +21,11 @@ export default function MoviesPage() {
       try {
         setIsLoading(true)
         if (!movieFilter.trim()) {
-        setMovies([])
-        setIsLoading(false)
-        return
-      }
+          setMovies([])
+          setIsLoading(false)
+          return
+        }
         const data = await getMovies(movieFilter)
-        console.log(data);
         if (data.length === 0) {
           toast.error(
             'Sorry, there are no movies matching your search query. Please try again!',
@@ -61,7 +60,7 @@ export default function MoviesPage() {
     <div className={css.wrap}>
       <MovieFilter />
       {isLoading && <Loader />}
-      {error && <NotFoundPage/>}
+      {error && <NotFoundPage />}
       {movies.length > 0 && (
         <MovieList items={filteredMovies} />
       )}

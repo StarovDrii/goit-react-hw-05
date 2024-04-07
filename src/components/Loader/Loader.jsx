@@ -1,5 +1,5 @@
-import { Triangle } from 'react-loader-spinner';
-import css from './Loader.module.css';
+import { Triangle } from 'react-loader-spinner'
+import css from './Loader.module.css'
 export default function Loader() {
   return (
     <Triangle
@@ -11,5 +11,5 @@ export default function Loader() {
       wrapperStyle={{}}
       wrapperClass={css.wrap}
     />
-  );
+  )
 }

@@ -1,25 +1,28 @@
-.wrap{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 16px;
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 16px;
 }
-.card{
-    display:flex;
-    flex-direction: column;
-    flex-basis: calc((100% - 48px) / 4);
-    gap: 6px;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc((100% - 48px) / 4);
+  gap: 6px;
+  box-shadow:
+    0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-.img{
-    border-radius: 4px;
+.img {
+  border-radius: 4px;
 }
-.cardInfo{
-    padding: 0px 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.cardInfo {
+  padding: 0px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
-.noCast{
-    padding: 0px 6px;
+.noCast {
+  padding: 0px 6px;
 }
